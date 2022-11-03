@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: wheat;
+            
+        }
+        .container h1 {
+            text-align: center;
+        }
+
+        .container {
+            border: 2px solid black;
+            padding-top: -32px;
+            width: 485px;
+            height: 430px;
+            margin-left: 500px;
+            background-color: rgb(65, 197, 240);
+            margin-top: 150px;
+        }
+
+
+        input {
+            align-items: center;
+            font-size: 20px;
+            box-shadow: 2px 5px 6px rgb(245, 6, 45);
+        }
+
+        @font-face {
+            font-family: 'moon';
+            src: url('moon.ttf');
+        }
+
+        .head {
+            font-family: 'moon';
+            font-size: 50px;
+        }
+
+        .box1 {
+            text-align: center;
+
+        }
+
+        .box {
+            height: 52px;
+            width: 241px;
+            background-color: rgb(89, 140, 157);
+            margin-left: 124px;
+            margin-top: 27px;
+            border: 2px solid rgb(9, 10, 12);
+        }
+
+        input:hover {
+            border: 2px solid pink;
+            box-shadow: 2px 5px 6px rgb(245, 6, 45);
+            border-radius: 4px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 15px;
+        }
+        label{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 25px;
+        }
+        label:hover{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 25px;
+        }
+
+        .box:hover {
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 6px 9px 8px rgb(65, 197, 240);
+            color: antiquewhite;
+            /* box-shadow: inset 3px 9px rgb(65, 197, 240) ; */
+            align-items: center;
+            font-family: 'moon';
+
+        }
+        .container:hover {
+            box-shadow: 25px 10px 700px 25px rgb(2, 188, 249);
+            border-radius: 20px;
+        }
+        #btn{
+            margin-top: 30px;
+        }
+        #btn:hover{
+            font-size: 20px;
+        }
+        .center{
+            margin-top: 146px;
+            text-align: center;
+            background-color: black;
+            color: whitesmoke;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="head">BMI CALCULATOR</h1>
+        <form action="">
+            <div class="box1">
+                <label for="height">HEIGHT(Cm):</label>
+                <input type="number" id="height"><br><br><br>
+                <label for="weight">WEIGHT(kg):</label>
+                <input type="number" id="weight"><br><br>
+                <input id="btn" type="button" value="CHECK BMI" onclick="bmi()"><br><br>
+            </div>
+
+
+        </form>
+        <div class="box" id="box">
+
+        </div>
+        
+
+    </div>
+    <script type="text/javascript">
+        function bmi() {
+            var height = parseInt(document.getElementById('height').value);
+            var weight = parseInt(document.getElementById('weight').value);
+            var bmiResult = (weight / (height * height)) * 10000;
+            bmiResult = bmiResult.toPrecision(2);
+            document.getElementById('box').innerHTML = "BMI: " + bmiResult;
+            return false;
+        }
+    </script>
+    <footer>
+        <div class="center">
+            copyright &copy; css_by_HH All right reserved!
+        </div>
+    </footer>
+</body>
+
+</html>
