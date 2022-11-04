@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style type="text/css">
+    body{
+        background-color: wheat;
+    }
+    body, h1, span{
+        font-size: 70px;
+    }
+    .h1{
+        font-size: 70px;
+        text-align: center;
+        text-shadow: 2px 4px 6px red;
+    }
+   </style>
+    <title>Document</title>
+
+    
+</head>
+<body>
+    <h1 class="h1">Arithmetic operation</h1>
+    <script type="text/javascript">
+    var n1 = parseInt(prompt("Enter the 1st number"));
+    var n2 = parseInt(prompt("Enter the 2nd number"));
+    var add = n1 + n2;
+    var mul = n1*n2;
+    var sub = n1- n2;
+    var div = n1/n2;
+    var mod = n1%n2;
+    alert("Addition is " +add );
+    document.write("<h1 style='color:red';> Addition of <span style='color:blue';> "+n1+ "</span> and <span style='color:green';>" +n2+ "</span> is <span style='color:magenta';>" +add+ "</span></h1>" );
+    document.write("<h1 style='color:blue';> Multiplication of <span style='color:blue';> "+n1+ "</span> and <span style='color:green';>" +n2+ "</span> is <span style='color:magenta';>" +mul+ "</span></h1>" );
+    document.write("<h1 style='color:magenta';> Subtraction of <span style='color:blue';> "+n1+ "</span> and <span style='color:green';>" +n2+ "</span> is <span style='color:magenta';>" +sub+ "</span></h1>" );
+    document.write("<h1 style='color:red';> Divison of <span style='color:blue';> "+n1+ "</span> and <span style='color:green';>" +n2+ "</span> is <span style='color:magenta';>" +div+ "</span></h1>" );
+    document.write("<h1 style='color:red';> Modules of <span style='color:blue';> "+n1+ "</span> and <span style='color:green';>" +n2+ "</span> is <span style='color:magenta';>" +mod+ "</span></h1>" );
+    
+
+    
+    
+    </script>
+</body>
+</html>
